@@ -41,12 +41,12 @@ final class MealDiaryViewModel: ObservableObject {
     func saveMeal() {
 
         guard !foodName.isEmpty else {
-            print("❌ Food name missing")
+            print("Food name missing")
             return
         }
 
         guard let cal = Int(calories) else {
-            print("❌ Calories must be a number")
+            print("Calories must be a number")
             return
         }
 

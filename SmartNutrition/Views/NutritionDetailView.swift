@@ -53,6 +53,6 @@ struct NutritionDetailView: View {
     }
 }
 
-//#Preview {
-//    NutritionDetailView()
-//}
+#Preview {
+    NutritionDetailView(food: FoodItem(name: "apple", calories: 95, protein: 0.5, carbs: 25, fat: 0.3), originalImage: .apple)
+}

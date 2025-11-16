@@ -25,7 +25,7 @@ final class PersistenceService {
 
         container.loadPersistentStores { desc, error in
             if let error = error {
-                fatalError("❌ Core Data store failed: \(error)")
+                fatalError("Core Data store failed: \(error)")
             }
         }
 
@@ -40,7 +40,7 @@ final class PersistenceService {
         do {
             try context.save()
         } catch {
-            print("❌ Failed saving context: \(error)")
+            print("Failed saving context: \(error)")
         }
     }
 
@@ -88,7 +88,7 @@ final class PersistenceService {
         do {
             return try container.viewContext.fetch(request)
         } catch {
-            print("❌ Fetch meals error: \(error)")
+            print("Fetch meals error: \(error)")
             return []
         }
     }

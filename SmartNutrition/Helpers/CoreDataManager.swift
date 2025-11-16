@@ -40,7 +40,7 @@ final class CoreDataManager {
             do {
                 try context.save()
             } catch {
-                print("❌ Error saving Core Data: \(error.localizedDescription)")
+                print("Error saving Core Data: \(error.localizedDescription)")
             }
         }
     }
@@ -68,7 +68,7 @@ final class CoreDataManager {
         do {
             return try context.fetch(request)
         } catch {
-            print("❌ Error fetching meals: \(error.localizedDescription)")
+            print("Error fetching meals: \(error.localizedDescription)")
             return []
         }
     }
